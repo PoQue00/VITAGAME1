@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scene/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/restart.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/pause.tscn" type="PackedScene" id=5]
+
+[node name="level_test2" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7, 7 )
+
+[node name="restart" parent="." instance=ExtResource( 4 )]
+
+[node name="Pause" parent="." instance=ExtResource( 5 )]

@@ -1,0 +1,18 @@
+[remap]
+
+importer="LDtk.import"
+type="PackedScene"
+path="res://.import/test9.ldtk-b24855250d040769f389eb65229b057c.tscn"
+
+[deps]
+
+source_file="res://ldtk stuff/test9.ldtk"
+dest_files=[ "res://.import/test9.ldtk-b24855250d040769f389eb65229b057c.tscn" ]
+
+[params]
+
+Import_Collisions=true
+Import_Custom_Entities=true
+Import_Metadata=true
+Import_YSort_Entities_Layer=false
+Post_Import_Script=""

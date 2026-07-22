@@ -1,0 +1,222 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scene/pause.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/restart.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ldtk stuff/tutorial/png/World_Level_2.png" type="Texture" id=4]
+[ext_resource path="res://Scene/NoWallGrab.tscn" type="PackedScene" id=5]
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Sprite"]
+position = Vector2( 648, 0 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="Sprite"]
+position = Vector2( -648, 0 )
+texture = ExtResource( 4 )
+
+[node name="Collisions" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( -44, 908, -44, 900, -52, 900, -52, 836, -4, 836, -4, 844, 4, 844, 4, 852, 20, 852, 20, 716, 44, 716, 44, 708, 76, 708, 76, 700, 140, 700, 140, 692, 188, 692, 188, 684, 212, 684, 212, 676, 228, 676, 228, 668, 244, 668, 244, 460, 204, 460, 204, 444, 244, 444, 244, 228, 236, 228, 236, 220, 204, 220, 204, 212, 188, 212, 188, 204, 180, 204, 180, 196, 172, 196, 172, 188, 164, 188, 164, 212, 156, 212, 156, 228, 148, 228, 148, 260, 132, 260, 132, 268, 124, 268, 124, 260, 116, 260, 116, 252, 108, 252, 108, 236, 100, 236, 100, 212, 92, 212, 92, 204, 84, 204, 84, 196, 76, 196, 76, 188, 52, 188, 52, 180, 44, 180, 44, 196, -4, 196, -4, 180, 28, 180, 28, 164, 148, 164, 148, -100, 196, -100, 196, -180, 204, -180, 204, -188, 212, -188, 212, -196, 220, -196, 220, -204, 228, -204, 228, -212, 244, -212, 244, -316, 236, -316, 236, -324, 228, -324, 228, -332, 220, -332, 220, -340, 212, -340, 212, -356, 196, -356, 196, -364, 188, -364, 188, -372, 180, -372, 180, -388, 244, -388, 244, -1044, 324, -1044, 324, 1044, -324, 1044, -324, -1044, -220, -1044, -220, -524, -196, -524, -196, -515, -156, -516, -156, -452, -164, -452, -164, -444, -188, -444, -188, -436, -196, -436, -196, -428, -204, -428, -204, -420, -220, -420, -220, -156, -156, -156, -156, 772, -164, 772, -164, 812, -172, 812, -172, 820, -180, 820, -180, 828, -196, 828, -196, 868, -188, 868, -188, 876, -180, 876, -180, 884, -172, 884, -172, 908, -188, 908, -188, 916, -196, 916, -196, 924, -180, 924, -180, 932, -164, 932, -164, 940, 156, 940, 156, 932, 164, 932, 164, 924, 180, 924, 180, 916, 204, 916, 204, 908, 212, 908, 212, 900, 204, 900, 204, 892, 196, 892, 196, 884, 188, 884, 188, 876, 180, 876, 180, 844, 188, 844, 188, 820, 196, 820, 196, 788, 188, 788, 188, 764, 172, 764, 172, 756, 76, 756, 76, 748, 52, 748, 52, 756, 44, 756, 44, 804, 36, 804, 36, 852, 28, 852, 28, 876, 20, 876, 20, 884, -20, 884, -20, 892, -28, 892, -28, 908 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( -92, 788, -92, 780, -85, 780, -84, 764, -76, 764, -76, 740, -28, 740, -28, 708, -36, 708, -36, 700, -44, 700, -44, 684, -92, 684, -92, 308, -84, 308, -84, 300, -76, 300, -76, 292, -68, 292, -68, 276, -60, 276, -60, 260, -52, 260, -52, 172, -84, 172, -84, 140, -92, 140, -92, 108, -100, 108, -100, 92, -108, 92, -108, 36, -116, 36, -116, 12, -108, 12, -108, -4, -100, -4, -100, -12, -124, -12, -124, 4, -132, 4, -132, 772, -124, 772, -124, 780, -116, 780, -116, 788 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( 164, 484, 172, 484, 172, 476, 180, 476, 180, 460, 188, 460, 188, 444, 172, 444, 172, 452, 164, 452, 164, 468, 156, 468, 156, 484, 148, 484, 148, 500, 140, 500, 140, 532, 108, 532, 108, 524, 60, 524, 60, 533, 52, 533, 52, 540, 60, 540, 60, 548, 76, 548, 76, 556, 108, 556, 108, 564, 148, 564, 148, 540, 156, 540, 156, 500, 164, 500 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( 92, 428, 92, 420, 100, 420, 100, 412, 92, 412, 92, 404, 68, 404, 68, 396, 28, 396, 28, 404, 20, 404, 20, 412, 12, 412, 12, 420, 20, 420, 20, 428 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( -44, 396, -28, 396, -28, 300, -44, 300, -44, 324, -52, 324, -52, 380, -44, 380 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( 12, 276, 12, 252, -4, 252, -4, 316, 12, 316, 12, 292, 20, 292, 20, 276 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( 12, 5, 44, 5, 44, 60, 28, 60, 28, 84, 12, 84, 12, 68, -12, 68, -12, 28, -4, 28, -4, 20, 12, 20 )
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( -4, 12, -4, -12, -12, -12, -12, -28, -36, -28, -36, -20, -44, -20, -44, 4, -20, 4, -20, 12 )
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( -44, 20, -44, 36, -52, 36, -52, 44, -60, 44, -60, 52, -68, 52, -68, 60, -84, 60, -84, 36, -76, 36, -76, 28, -52, 28, -52, 20 )
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( 76, -100, 76, -92, 84, -92, 84, -84, 76, -84, 76, -76, 68, -76, 68, -68, -44, -68, -44, -92, 12, -92, 12, -100 )
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( -68, -140, -84, -140, -84, -84, -76, -84, -75, -92, -68, -92 )
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( -116, -28, -116, -36, -108, -36, -108, -68, -116, -68, -116, -196, -132, -196, -132, -124, -140, -124, -140, -20, -132, -20, -132, -28 )
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( -68, -228, -84, -228, -84, -172, -68, -172 )
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( -132, -404, -116, -404, -116, -228, -132, -228 )
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( -196, -388, -180, -388, -180, -260, -172, -260, -172, -244, -164, -244, -164, -236, -156, -236, -156, -188, -180, -188, -180, -196, -188, -196, -188, -204, -196, -204 )
+
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( 28, -388, -20, -388, -20, -364, 4, -364, 4, -356, 12, -356, 12, -348, 28, -348 )
+
+[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( -84, -476, -76, -476, -76, -468, -68, -468, -68, -452, -92, -452, -92, -468, -84, -468 )
+
+[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PoolVector2Array( -52, -460, -12, -460, -12, -484, 28, -484, 28, -492, 44, -492, 44, -484, 84, -484, 84, -476, 148, -476, 148, -484, 220, -484, 220, -516, -132, -516, -132, -460, -108, -460, -108, -468, -100, -468, -100, -484, -68, -484, -68, -476, -60, -476, -60, -468, -52, -468 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 133, 935 )
+
+[node name="restart" parent="." instance=ExtResource( 3 )]
+
+[node name="Pause" parent="." instance=ExtResource( 1 )]
+
+[node name="no wall grab" type="Node" parent="."]
+
+[node name="NoWallGrab" parent="no wall grab" instance=ExtResource( 5 )]
+position = Vector2( 244, 626 )
+rotation = 3.14159
+
+[node name="NoWallGrab2" parent="no wall grab" instance=ExtResource( 5 )]
+position = Vector2( 244, 584 )
+rotation = 3.14159
+
+[node name="NoWallGrab3" parent="no wall grab" instance=ExtResource( 5 )]
+position = Vector2( 244, 542 )
+rotation = 3.14159
+
+[node name="NoWallGrab4" parent="no wall grab" instance=ExtResource( 5 )]
+position = Vector2( 244, 500 )
+rotation = 3.14159
+
+[node name="NoWallGrab5" parent="no wall grab" instance=ExtResource( 5 )]
+position = Vector2( 244, 460 )
+rotation = 3.14159
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 127, 501 )
+rotation = 1.66853
+
+[node name="Label" type="Label" parent="Node2D"]
+margin_left = 416.474
+margin_top = 25.4809
+margin_right = 429.474
+margin_bottom = 39.4809
+text = "<-"
+
+[node name="Label2" type="Label" parent="Node2D"]
+margin_left = 391.049
+margin_top = 155.583
+margin_right = 404.049
+margin_bottom = 169.583
+rect_rotation = 87.7
+text = "<-"
+
+[node name="Label3" type="Label" parent="Node2D"]
+margin_left = 289.769
+margin_top = 96.1826
+margin_right = 302.769
+margin_bottom = 110.183
+rect_rotation = 87.7
+text = "<-"
+
+[node name="Label4" type="Label" parent="Node2D"]
+margin_left = 159.238
+margin_top = 138.12
+margin_right = 172.238
+margin_bottom = 152.12
+rect_rotation = 18.8
+text = "<-"
+
+[node name="Label5" type="Label" parent="Node2D"]
+margin_left = 103.233
+margin_top = 181.794
+margin_right = 116.233
+margin_bottom = 195.794
+rect_rotation = 93.9
+text = "<-"
+
+[node name="Label6" type="Label" parent="Node2D"]
+margin_left = 18.3455
+margin_top = 187.103
+margin_right = 31.3455
+margin_bottom = 201.103
+rect_rotation = 93.9
+text = "<-"
+
+[node name="Label7" type="Label" parent="Node2D"]
+margin_left = -5.65744
+margin_top = 147.255
+margin_right = 7.34256
+margin_bottom = 161.255
+rect_rotation = 189.5
+text = "<-"
+
+[node name="Label8" type="Label" parent="Node2D"]
+margin_left = 7.80661
+margin_top = 79.6182
+margin_right = 20.8066
+margin_bottom = 93.6182
+rect_rotation = 189.5
+text = "<-"
+
+[node name="Label9" type="Label" parent="Node2D"]
+margin_right = 13.0
+margin_bottom = 14.0
+rect_rotation = 95.6
+text = "<-"
+
+[node name="Label10" type="Label" parent="Node2D"]
+margin_left = -65.5486
+margin_top = -12.664
+margin_right = -52.5486
+margin_bottom = 1.336
+rect_rotation = -10.8
+text = "<-"
+
+[node name="Label11" type="Label" parent="Node2D"]
+margin_left = -129.047
+margin_top = 98.0608
+margin_right = -116.047
+margin_bottom = 112.061
+rect_rotation = -79.7
+text = "<-"
+
+[node name="Label12" type="Label" parent="Node2D"]
+margin_left = -168.758
+margin_top = 154.204
+margin_right = -155.758
+margin_bottom = 168.204
+rect_rotation = -10.8
+text = "<-"
+
+[node name="Label13" type="Label" parent="Node2D"]
+margin_left = -263.05
+margin_top = 186.56
+margin_right = -250.05
+margin_bottom = 200.56
+rect_rotation = -85.9
+text = "<-"
+
+[node name="Label14" type="Label" parent="Node2D"]
+margin_left = 322.903
+margin_top = 44.7035
+margin_right = 468.903
+margin_bottom = 126.703
+rect_rotation = -93.9
+text = "A/D To Run
+Space To Jump
+K To Sprint
+L To Dash
+K+W on a wall to climb"

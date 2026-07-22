@@ -1,5 +1,9 @@
 extends CanvasLayer
 
+var settings_scene = preload("res://Scene/Settings.tscn")
+var settings_instance
+
+
 func _ready():
 	visible = false
 	pause_mode = Node.PAUSE_MODE_PROCESS
@@ -34,3 +38,10 @@ func _on_Menu_pressed():
 
 func _on_Quit_pressed():
 	get_tree().quit()
+
+func _on_Settings_pressed():
+	settings_instance = settings_scene.instance()
+	settings_instance.pause_menu = self
+	add_child(settings_instance)
+	$Panel.hide()
+	settings_instance.get_node("Panel/Back").grab_focus()

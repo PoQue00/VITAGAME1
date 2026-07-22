@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+onready var hud = get_parent().get_node("HUD")
 
 #==================================================
 # Movement
@@ -1042,34 +1043,15 @@ onready var dash_label = get_node("../HUD/DashLabel")
 
 func _update_hud():
 
-	# Wall climb timer
+	print("HUD update:", GameSettings.dev_stats_enabled)
+	hud.visible = GameSettings.dev_stats_enabled
+
+
+	if !GameSettings.dev_stats_enabled:
+		return
+
 	if wall_climb_label:
+		wall_climb_label.text = "Climb: " + str(round(wall_climb_time))
 
-		var climb_time = max(wall_climb_timer, 0)
-
-		wall_climb_label.text = (
-			"Wall Climb: "
-			+
-			str(stepify(climb_time, 0.1))
-			+
-			" / "
-			+
-			str(wall_climb_time)
-		)
-
-
-
-	# Dash cooldown
 	if dash_label:
-
-		var dash_time = max(dash_cooldown_timer, 0)
-
-		dash_label.text = (
-			"Dash: "
-			+
-			str(stepify(dash_time, 0.1))
-			+
-			" / "
-			+
-			str(dash_cooldown)
-		)
+		dash_label.text = "Dash: " + str(round(dash_cooldown))

@@ -18,9 +18,9 @@ onready var sprite = $AnimatedSprite
 # Jump
 #==================================================
 
-export var jump_force = -320
+export var jump_force = -340
 export var gravity = 900
-export var max_fall_speed = 500
+export var max_fall_speed = 450
 
 
 # Ground memory
@@ -66,7 +66,10 @@ export var wall_climb_time = 2.0
 var wall_climb_timer = 0.0
 var is_wall_climbing = false
 
+# Wall Stick
+export var wall_stick_time = 0.15
 
+var wall_stick_timer = 0.0
 
 #==================================================
 # Dash
@@ -546,7 +549,12 @@ func _wall_climb(delta):
 
 			state = State.WALL_CLIMB
 
+			var wall_direction = _get_wall_direction()
 
+			# Keep the player pressed against the wall
+			velocity.x = -wall_direction.x * 20
+
+			# Climb upwards
 			velocity.y = -wall_climb_speed
 
 
@@ -562,93 +570,55 @@ func _wall_climb(delta):
 
 func _wall_slide():
 
-
 	if !can_wall_grab():
-
 		return false
-
-
 
 	if !is_on_wall():
-
 		return false
-
-
 
 	if is_on_floor():
-
 		return false
 
+	# <<< ADD THE NEW CODE HERE >>>
+
+	var wall_direction = _get_wall_direction()
+
+	if wall_direction.x != 0:
+
+		# Detach only if the player pushes away from the wall
+		if sign(input_direction) == wall_direction.x:
+
+			return false
+
+		else:
+
+			# Small force into the wall
+			velocity.x = -wall_direction.x * 10
 
 
 	# Wall climb takes priority
-
 	if is_wall_climbing:
-
-
 		return true
-
-
-
 
 
 	state = State.WALL_SLIDE
 
-
-
-	# Wall contact restores air dash
-
 	can_air_dash = true
 
-
-
-
-
 	if velocity.y > wall_slide_speed:
-
-
 		velocity.y = wall_slide_speed
-
-
-
-
-
-	# Wall jump
-
 
 	if Input.is_action_just_pressed("jump"):
 
-
-		var wall_direction = _get_wall_direction()
-
-
-
-		velocity.x = (
-			wall_direction.x
-			*
-			wall_jump_force
-		)
-
-
-
+		velocity.x = wall_direction.x * wall_jump_force
 		velocity.y = wall_jump_height
 
-
-
 		can_air_dash = true
-
-
 		state = State.JUMP
-
 
 		return true
 
-
-
-
-
 	return true
-
 
 
 

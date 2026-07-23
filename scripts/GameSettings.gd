@@ -1,3 +1,3 @@
 extends Node
 
-var dev_stats_enabled = true
+var dev_stats_enabled = false

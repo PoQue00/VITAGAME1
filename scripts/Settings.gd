@@ -3,7 +3,6 @@ extends Control
 var pause_menu
 var Player
 
-
 func _on_Back_pressed():
 	pause_menu.get_node("Panel").show()
 	pause_menu.get_node("Panel/VBoxContainer/Settings").grab_focus()

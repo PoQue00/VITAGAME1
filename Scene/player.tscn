@@ -170,7 +170,7 @@ position = Vector2( 8.8125, -16.1875 )
 scale = Vector2( 0.494141, 0.494141 )
 frames = SubResource( 10 )
 animation = "walk"
-frame = 4
+frame = 3
 playing = true
 
 [node name="WallGrabDetector" type="Area2D" parent="Player" groups=["NoWallGrab"]]
@@ -178,6 +178,7 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/WallGrabDetector"]
+visible = false
 position = Vector2( 9.81249, -16 )
 shape = SubResource( 38 )
 

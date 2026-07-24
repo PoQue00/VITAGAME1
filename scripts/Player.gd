@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-onready var hud = get_parent().get_node("HUD")
-
 #==================================================
 # Movement
 #==================================================
@@ -102,6 +100,17 @@ var facing = 1
 var input_direction = 0.0
 var current_speed = walk_speed
 
+
+#==================================================
+# Other Variables
+#==================================================
+
+var respawn_position = Vector2()
+
+#==================================================
+
+func _ready():
+	respawn_position = global_position
 
 
 #==================================================
@@ -755,7 +764,6 @@ func _physics_process(delta):
 
 		_update_animation()
 
-		_update_hud()
 
 		return
 
@@ -773,7 +781,6 @@ func _physics_process(delta):
 
 	_update_animation()
 
-	_update_hud()
 
 
 
@@ -994,34 +1001,3 @@ func _update_animation():
 #
 #
 #
-
-
-#==================================================
-# HUD References
-#==================================================
-
-onready var wall_climb_label = get_node("../HUD/WallClimbLabel")
-onready var dash_label = get_node("../HUD/DashLabel")
-
-
-
-
-
-#==================================================
-# HUD Update
-#==================================================
-
-func _update_hud():
-
-	print("HUD update:", GameSettings.dev_stats_enabled)
-	hud.visible = GameSettings.dev_stats_enabled
-
-
-	if !GameSettings.dev_stats_enabled:
-		return
-
-	if wall_climb_label:
-		wall_climb_label.text = "Climb: " + str(round(wall_climb_time))
-
-	if dash_label:
-		dash_label.text = "Dash: " + str(round(dash_cooldown))

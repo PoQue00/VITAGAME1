@@ -8,9 +8,9 @@ func _ready():
 	visible = false
 	pause_mode = Node.PAUSE_MODE_PROCESS
 
-	$Panel/VBoxContainer/Resume.connect("pressed", self, "_on_Resume_pressed")
-	$Panel/VBoxContainer/Menu.connect("pressed", self, "_on_Menu_pressed")
-	$Panel/VBoxContainer/Quit.connect("pressed", self, "_on_Quit_pressed")
+	$Panel/Resume.connect("pressed", self, "_on_Resume_pressed")
+	$Panel/Menu.connect("pressed", self, "_on_Menu_pressed")
+	$Panel/Quit.connect("pressed", self, "_on_Quit_pressed")
 
 func _process(delta):
 	if Input.is_action_just_pressed("pause"):
@@ -23,7 +23,7 @@ func pause_game():
 	visible = true
 	get_tree().paused = true
 
-	$Panel/VBoxContainer/Resume.grab_focus()
+	$Panel/Resume.grab_focus()
 
 func resume_game():
 	visible = false

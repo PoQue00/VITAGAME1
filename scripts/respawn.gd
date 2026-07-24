@@ -3,7 +3,6 @@ extends Area2D
 func _ready():
 	connect("body_entered", self, "_on_body_entered")
 
-
 func _on_body_entered(body):
 	if body.name == "Player":
-		get_tree().change_scene("res://Scene/test4.tscn")
+		body.respawn_position = global_position

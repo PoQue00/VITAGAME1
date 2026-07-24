@@ -1,7 +1,8 @@
 extends Control
 
 func _ready():
-	$Panel/VBoxContainer/level1.grab_focus()
+	$Panel/level1.grab_focus()
+	Music.play_menu()
 
 
 

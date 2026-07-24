@@ -59,7 +59,7 @@ var no_wall_grab_count = 0
 # Wall climb
 
 export var wall_climb_speed = 120
-export var wall_climb_time = 2.0
+export var wall_climb_time = 2.1
 
 var wall_climb_timer = 0.0
 var is_wall_climbing = false

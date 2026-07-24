@@ -106,6 +106,9 @@ var current_speed = walk_speed
 #==================================================
 
 var respawn_position = Vector2()
+var drop_timer = 0.0
+const DROP_TIME = 0.2
+
 
 #==================================================
 
@@ -316,6 +319,15 @@ func _variable_jump():
 #==================================================
 # Normal Jump
 #==================================================
+	if is_on_floor() \
+	and Input.is_action_pressed("down") \
+	and Input.is_action_just_pressed("jump"):
+		position.y += 2
+		set_collision_mask_bit(0, false)
+		drop_timer = DROP_TIME
+		return
+
+
 
 func _jump():
 
@@ -689,6 +701,24 @@ func _move_player():
 
 func _physics_process(delta):
 
+	# Update drop timer
+	if drop_timer > 0:
+		drop_timer -= delta
+
+	# Re-enable platform collisions when the timer ends
+	if drop_timer <= 0:
+		set_collision_mask_bit(2, true) # Change 1 if your platform layer is different
+
+	# Down + Jump to drop through
+	if is_on_floor() \
+	and Input.is_action_pressed("down") \
+	and Input.is_action_just_pressed("jump"):
+
+		position.y += 2
+		set_collision_mask_bit(1, false)
+		drop_timer = DROP_TIME
+		return
+
 
 	_get_input()
 
@@ -710,7 +740,8 @@ func _physics_process(delta):
 
 	_jump()
 
-
+	if drop_timer > 0:
+		drop_timer -= delta
 
 	# Dash input
 

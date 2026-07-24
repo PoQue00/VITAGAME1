@@ -18,4 +18,4 @@ func _on_Volume_value_changed(value):
 	if value <= 0:
 		AudioServer.set_bus_volume_db(bus, -80)
 	else:
-		AudioServer.set_bus_volume_db(bus, linear2db(value / 100.0))
+		AudioServer.set_bus_volume_db(bus, linear2db(value / 10.0))

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg.png-23a59c2e9cba2223a50fa3fe41b70b25.stex"
+path="res://.import/jumppad.png-b6dbfdc041d5d57cab1910acf56378f7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg.png"
-dest_files=[ "res://.import/bg.png-23a59c2e9cba2223a50fa3fe41b70b25.stex" ]
+source_file="res://assets/jumppad.png"
+dest_files=[ "res://.import/jumppad.png-b6dbfdc041d5d57cab1910acf56378f7.stex" ]
 
 [params]
 

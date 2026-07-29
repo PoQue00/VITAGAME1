@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg.png-23a59c2e9cba2223a50fa3fe41b70b25.stex"
+path="res://.import/darkfill.png-b37e18484aad3dc303fb1e204282f033.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bg.png"
-dest_files=[ "res://.import/bg.png-23a59c2e9cba2223a50fa3fe41b70b25.stex" ]
+source_file="res://assets/darkfill.png"
+dest_files=[ "res://.import/darkfill.png-b37e18484aad3dc303fb1e204282f033.stex" ]
 
 [params]
 

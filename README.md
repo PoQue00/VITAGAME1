@@ -89,11 +89,47 @@ STEP 8: ADDING LEVEL ITEMS
 IN THE SCENE TAB THERE ARE MANY THINGS YOU CAN ADD TO A LEVEL.
 A LIST OF CURRENT ITEMS ARE:
 RESPAWN POINT (respawn.tscn)
+
 COLLECTABLES (Seed.tscn)
+
 DARK (DarkFill.tscn) AND (DarkTop.tscn)
+
 FALLING PLATFORMS (FallingPlatform.tscn)
+
 SPIKES (Hazard.tscn)
+
 JUMP PADS (jumppad.tscn)
+
 VINES (NoWallGrab.tscn)
+
 PAUSE MENU (Pause.tscn)
+
 PLATFORMS (Platform.tscn) AND (PlatformContinue.tscn) AND (PlatformLong.tscn) AND (PlatformMiddle.tscn)
+
+
+TO USE THESE YOU JUST NEED TO DRAG AND DROP THEM ONTO THE NODE2D YOU CREATED AND MOVE IT TO WHERE YOU WANT IT
+<img width="1920" height="1080" alt="Godot_v3 5-rc5-vita_rsCNHqAw8i" src="https://github.com/user-attachments/assets/d7ed18e7-3cb8-47d0-8c04-481a3a5a1261" />
+<img width="1920" height="1080" alt="Godot_v3 5-rc5-vita_fTu5TDR3NC" src="https://github.com/user-attachments/assets/0724bf6b-7bf3-472f-9925-d0c82f58e40a" />
+
+STEP 9: SENDING THE SCENE TO ME
+
+AFTER YOU FINISHED YOUR LEVEL YOU HAVE 2 WAYS TO SEND IT TO ME: GITHUB, or DIRECTLY TO ME THROUGH EMAIL OR WHATSAPP
+
+TO DO THIS YOU NEED TO FIND YOU SCENE FILE IN FILE EXPLORER
+<img width="1920" height="1080" alt="KnzCzktlSl" src="https://github.com/user-attachments/assets/5c42652b-5ef7-4b95-a00c-73d959c8fefb" />
+
+THROUGH WHATSAPP JUST DRAG AND DROP THE FILE AND SEND IT
+<img width="1920" height="1080" alt="q3lzlHwMP8" src="https://github.com/user-attachments/assets/969aa2ba-eade-4669-a7cc-82644c9ca06c" />
+
+THROUGH GITHUB CLICK THE "Scene" FOLDER
+<img width="1920" height="1080" alt="chrome_scC9JPWac8" src="https://github.com/user-attachments/assets/74b22029-51d3-4309-902b-3ed64502fc3b" />
+
+THEN CLICK ON "ADD FILE" THEN "UPLOAD FILES"
+<img width="1920" height="1080" alt="chrome_SL4zpYUFnn" src="https://github.com/user-attachments/assets/4f42f4a5-5e6c-416b-9138-deb6a4c9b4da" />
+
+THEN DRAG AND DROP YOUR LEVELS .tscn FILE
+<img width="1920" height="1080" alt="ehcS8bwZ2i" src="https://github.com/user-attachments/assets/cb49153b-d6eb-4f81-aad0-b61ffd2622be" />
+
+ONCE IT HAS UPLOADED PRESS COMMIT CHANGES
+<img width="1920" height="1080" alt="chrome_3RiP1aJorf" src="https://github.com/user-attachments/assets/170547c0-f653-4571-9023-47ec3861159b" />
+

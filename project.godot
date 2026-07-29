@@ -42,6 +42,7 @@ Supabase="*res://scripts/Supabase.gd"
 Network="*res://Scene/Network.tscn"
 PlayerData="*res://scripts/PlayerData.gd"
 CurrentLevel="*res://Scene/Current Level.tscn"
+Playtime="*res://scripts/Playtime.gd"
 
 [debug]
 

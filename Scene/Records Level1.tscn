@@ -1,0 +1,54 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scripts/Records.gd" type="Script" id=1]
+[ext_resource path="res://assets/PixelPurl.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/button1.png" type="Texture" id=3]
+[ext_resource path="res://assets/button3.png" type="Texture" id=4]
+[ext_resource path="res://assets/button2.png" type="Texture" id=5]
+[ext_resource path="res://assets/RecordsTheme.tres" type="Theme" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 64, 32 )
+
+[node name="Records Level1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 6 )
+script = ExtResource( 1 )
+thecurrentlevelineedtoshowtheleaderboardfor = "Level1"
+
+[node name="Panel" type="Panel" parent="."]
+
+[node name="LevelList" type="VBoxContainer" parent="Panel"]
+margin_left = 70.0
+margin_top = 4.0
+margin_right = 110.0
+margin_bottom = 44.0
+
+[node name="Back" type="Button" parent="Panel"]
+margin_right = 65.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Back"
+
+[connection signal="pressed" from="Panel/Back" to="." method="_on_Back_pressed"]

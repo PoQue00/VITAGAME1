@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/SpeedHack.gd" type="Script" id=1]
+
+[node name="SpeedHack" type="Node2D"]
+script = ExtResource( 1 )
+speed_scale = 0.5

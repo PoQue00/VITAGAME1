@@ -71,3 +71,29 @@ LEFT CLICK MOUSE TO CREATE TILES, RIGHT CLICK TO REMOVE THEM
 
 STEP 7: ADDING PLAYER AND TESTING SCENE
 
+GO BACK TO THE SCENE FOLDER AND FIND "player.tscn"
+<img width="1920" height="1080" alt="Godot_v3 5-rc5-vita_7j1SVGimhc" src="https://github.com/user-attachments/assets/cc6d6f0c-67f6-4769-aae0-beac6e90fd83" />
+
+DRAG AND DROP IT ONTOP OF YOUR NODE 2D
+<img width="1920" height="1080" alt="Godot_v3 5-rc5-vita_ijWvxJ3pvM" src="https://github.com/user-attachments/assets/61667457-a80e-4881-83ae-9632e22f09e2" />
+
+DRAG YOUR PLAYER TO ANY PLACE YOU WANT
+<img width="1920" height="1080" alt="Godot_v3 5-rc5-vita_MmO2Vx4kKi" src="https://github.com/user-attachments/assets/2f956a18-4314-41f0-8dc6-d80a240e933c" />
+
+PRESS F6 OR THE "PLAY SCENE" BUTTON TO TEST THE LEVEL
+<img width="1920" height="1080" alt="Godot_v3 5-rc5-vita_gXnSve4xKP" src="https://github.com/user-attachments/assets/001de1fa-1b8d-4a3e-8ec8-d1d7f9090305" />
+<img width="1920" height="1080" alt="EUfrZ1a0sW" src="https://github.com/user-attachments/assets/cad17228-1d25-45b2-a602-be7a157950d6" />
+
+STEP 8: ADDING LEVEL ITEMS
+
+IN THE SCENE TAB THERE ARE MANY THINGS YOU CAN ADD TO A LEVEL.
+A LIST OF CURRENT ITEMS ARE:
+RESPAWN POINT (respawn.tscn)
+COLLECTABLES (Seed.tscn)
+DARK (DarkFill.tscn) AND (DarkTop.tscn)
+FALLING PLATFORMS (FallingPlatform.tscn)
+SPIKES (Hazard.tscn)
+JUMP PADS (jumppad.tscn)
+VINES (NoWallGrab.tscn)
+PAUSE MENU (Pause.tscn)
+PLATFORMS (Platform.tscn) AND (PlatformContinue.tscn) AND (PlatformLong.tscn) AND (PlatformMiddle.tscn)

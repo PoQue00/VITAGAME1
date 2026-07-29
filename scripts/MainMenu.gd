@@ -15,3 +15,8 @@ func _on_select_pressed():
 func _on_quit_pressed():
 	get_tree().quit()
 
+func _on_leaderboard_pressed():
+	get_tree().change_scene("res://Scene/Records main.tscn")
+
+func _on_settings_pressed():
+	get_tree().change_scene("res://Scene/Options.tscn")

@@ -41,7 +41,7 @@ func get_leaderboard(level):
 		+ "?level_name=eq."
 		+ level
 		+ "&order=time.asc"
-		+ "&limit=10"
+		+ "&limit=25"
 	)
 
 	print(url)

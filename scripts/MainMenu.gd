@@ -5,7 +5,6 @@ func _ready():
 	Music.play_menu()
 
 
-
 func _on_play_pressed():
 	get_tree().change_scene("res://Scene/Tutorial.tscn")
 

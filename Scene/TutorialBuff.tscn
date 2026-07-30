@@ -1,11 +1,12 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scene/Hazard.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/restart.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/PixelPurl.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Scene/NoWallGrab.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scene/Finish Line.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/rose.png" type="Texture" id=6]
+[ext_resource path="res://scripts/Finish Line.gd" type="Script" id=7]
 [ext_resource path="res://Scene/TileMap.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scripts/Levels/Tutorial.gd" type="Script" id=9]
 [ext_resource path="res://Scene/pause.tscn" type="PackedScene" id=10]
@@ -13,19 +14,17 @@
 [ext_resource path="res://Scene/Seed.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scene/DO NOT TOUCH.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scripts/timer.gd" type="Script" id=15]
+[ext_resource path="res://Scene/Current Level.tscn" type="PackedScene" id=17]
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 4 )
 
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 9.0
+height = 12.0
+
 [node name="Tutorial" type="Node2D"]
 script = ExtResource( 9 )
-
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -778.0
-margin_top = -1031.0
-margin_right = 2280.0
-margin_bottom = 798.0
-color = Color( 0, 0.101961, 0.0352941, 1 )
 
 [node name="Collectables" type="Node2D" parent="."]
 
@@ -241,12 +240,6 @@ position = Vector2( 1452, -288 )
 [node name="Respawn" parent="." instance=ExtResource( 11 )]
 position = Vector2( 483, 192 )
 
-[node name="Finish Line" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1758, -576 )
-next_level = "res://Scene/Level 1.tscn"
-current_level = "Tutorial"
-level_name = "Tutorial"
-
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 90, 186 )
 
@@ -262,4 +255,20 @@ script = ExtResource( 15 )
 margin_right = 40.0
 margin_bottom = 14.0
 
-[connection signal="body_entered" from="Finish Line" to="Finish Line" method="_on_Finish_Line_body_entered"]
+[node name="Current Level" parent="." instance=ExtResource( 17 )]
+current_level = "Tutorial"
+
+[node name="nextlevel" type="Area2D" parent="."]
+position = Vector2( 1751, -591 )
+script = ExtResource( 7 )
+next_level = "res://Scene/LEVEL 1-1.tscn"
+current_level = "Tutorial"
+level_name = "Tutorial"
+
+[node name="Sprite" type="Sprite" parent="nextlevel"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nextlevel"]
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="nextlevel" to="nextlevel" method="_on_nextlevel_body_entered"]

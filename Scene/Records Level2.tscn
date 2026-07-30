@@ -3,43 +3,43 @@
 [ext_resource path="res://scripts/records/Records.gd" type="Script" id=1]
 [ext_resource path="res://assets/PixelPurl.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/button1.png" type="Texture" id=3]
-[ext_resource path="res://assets/button3.png" type="Texture" id=4]
-[ext_resource path="res://assets/button2.png" type="Texture" id=5]
+[ext_resource path="res://assets/button2.png" type="Texture" id=4]
+[ext_resource path="res://assets/button3.png" type="Texture" id=5]
 [ext_resource path="res://assets/RecordsTheme.tres" type="Theme" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxTexture" id=2]
-texture = ExtResource( 5 )
-region_rect = Rect2( 0, 0, 64, 32 )
-
-[sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 64, 32 )
 
-[sub_resource type="StyleBoxTexture" id=4]
+[sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="StyleBoxTexture" id=5]
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 64, 32 )
 
-[node name="Records Level1" type="Control"]
+[node name="Records Level2" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 6 )
 script = ExtResource( 1 )
-thecurrentlevelineedtoshowtheleaderboardfor = "Level1"
+thecurrentlevelineedtoshowtheleaderboardfor = "Level2"
 
 [node name="Panel" type="Panel" parent="."]
 
 [node name="LevelList" type="VBoxContainer" parent="Panel"]
-margin_left = 70.0
-margin_top = 4.0
-margin_right = 110.0
-margin_bottom = 44.0
+margin_left = 3.0
+margin_top = 31.0
+margin_right = 520.0
+margin_bottom = 574.0
 
 [node name="Back" type="Button" parent="Panel"]
 margin_right = 65.0

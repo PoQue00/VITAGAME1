@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://scripts/Records main.gd" type="Script" id=1]
+[ext_resource path="res://scripts/records/Records main.gd" type="Script" id=1]
 [ext_resource path="res://assets/PixelPurl.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/button1.png" type="Texture" id=3]
 [ext_resource path="res://assets/button3.png" type="Texture" id=4]
@@ -71,6 +71,20 @@ custom_styles/focus = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 text = "Level 1"
 
+[node name="Level2" type="Button" parent="."]
+margin_left = 7.0
+margin_top = 100.0
+margin_right = 67.0
+margin_bottom = 130.0
+focus_neighbour_top = NodePath("../Tutorial")
+focus_neighbour_bottom = NodePath("../Username")
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Level 2"
+
 [node name="Username" type="Button" parent="."]
 margin_left = 7.0
 margin_top = 510.0
@@ -87,4 +101,5 @@ text = "Username"
 [connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]
 [connection signal="pressed" from="Tutorial" to="." method="_on_Tutorial_pressed"]
 [connection signal="pressed" from="Level1" to="." method="_on_Level1_pressed"]
+[connection signal="pressed" from="Level2" to="." method="_on_Level2_pressed"]
 [connection signal="pressed" from="Username" to="." method="_on_Username_pressed"]

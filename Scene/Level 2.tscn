@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scene/respawn.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/TileMap.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Scene/pause.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scripts/Levels/Level 2.gd" type="Script" id=16]
 [ext_resource path="res://Scene/Seed.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scene/Collectable Counter.tscn" type="PackedScene" id=18]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.0
@@ -189,12 +190,10 @@ rotation = 3.13221
 [node name="Hazard32" parent="Spikes" instance=ExtResource( 12 )]
 position = Vector2( 513, 109 )
 rotation = 1.5766
-scale = Vector2( 1, 1 )
 
 [node name="Hazard35" parent="Spikes" instance=ExtResource( 12 )]
 position = Vector2( 513, 9 )
 rotation = 1.5766
-scale = Vector2( 1, 1 )
 
 [node name="Hazard33" parent="Spikes" instance=ExtResource( 12 )]
 position = Vector2( 576, 95 )
@@ -383,7 +382,6 @@ rotation = 3.13899
 [node name="NoWallGrab9" parent="Vines" instance=ExtResource( 5 )]
 position = Vector2( 127, 364 )
 rotation = 3.13865
-scale = Vector2( 1, 1 )
 
 [node name="NoWallGrab10" parent="Vines" instance=ExtResource( 5 )]
 position = Vector2( 97, 362 )
@@ -500,6 +498,8 @@ script = ExtResource( 13 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Area2D"]
 position = Vector2( 1773, -589 )
 shape = SubResource( 1 )
+
+[node name="Collectable Counter" parent="CanvasLayer" instance=ExtResource( 18 )]
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 41, 320 )

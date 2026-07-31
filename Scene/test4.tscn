@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scene/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/player.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Scene/NoWallGrab.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/Seed.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scene/DO NOT TOUCH.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scene/Collectable Counter.tscn" type="PackedScene" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 8 )
@@ -28,15 +29,15 @@ script = ExtResource( 5 )
 
 [node name="Seed" parent="Collectables" instance=ExtResource( 10 )]
 position = Vector2( -512, -1 )
-strawberry_id = "02"
+strawberry_id = "01"
 
 [node name="Seed2" parent="Collectables" instance=ExtResource( 10 )]
 position = Vector2( 2211, -755 )
-strawberry_id = "03"
+strawberry_id = "02"
 
 [node name="Seed3" parent="Collectables" instance=ExtResource( 10 )]
 position = Vector2( 19584, -1057 )
-strawberry_id = "04"
+strawberry_id = "03"
 
 [node name="spikes" type="Node2D" parent="."]
 
@@ -229,3 +230,7 @@ position = Vector2( 122, -129 )
 
 [node name="SpeedHack" parent="." instance=ExtResource( 11 )]
 enabled = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Collectable Counter" parent="CanvasLayer" instance=ExtResource( 12 )]

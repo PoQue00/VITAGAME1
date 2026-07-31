@@ -95,10 +95,23 @@ custom_styles/focus = SubResource( 25 )
 custom_styles/normal = SubResource( 26 )
 text = "Tutorial"
 
+[node name="playground" type="Button" parent="Control/Panel"]
+margin_left = 299.0
+margin_top = 5.0
+margin_right = 372.0
+margin_bottom = 39.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 22 )
+custom_styles/hover = SubResource( 23 )
+custom_styles/pressed = SubResource( 24 )
+custom_styles/focus = SubResource( 25 )
+custom_styles/normal = SubResource( 26 )
+text = "Playground"
+
 [node name="chap1" type="Button" parent="Control/Panel"]
-margin_left = 290.0
+margin_left = 459.0
 margin_top = 9.0
-margin_right = 359.0
+margin_right = 528.0
 margin_bottom = 40.0
 rect_scale = Vector2( 2, 2 )
 theme = ExtResource( 6 )
@@ -110,4 +123,5 @@ text = "Chapter 1"
 
 [connection signal="pressed" from="Control/Panel/back" to="Control" method="_on_back_pressed"]
 [connection signal="pressed" from="Control/Panel/tutorial" to="Control" method="_on_tutorial_pressed"]
+[connection signal="pressed" from="Control/Panel/playground" to="Control" method="_on_playground_pressed"]
 [connection signal="pressed" from="Control/Panel/chap1" to="Control" method="_on_chap1_pressed"]
